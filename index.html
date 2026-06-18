@@ -1,88 +1,355 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pratik Kamble | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pratik Kamble | DevOps Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
-  <header class="header">
+
+  <!-- ── NAVBAR ─────────────────────────────────────────── -->
+  <header class="header" id="header">
     <nav class="navbar">
-      <div class="logo">Pratik Kamble</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <a href="#hero" class="logo">PK<span class="logo-dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"     class="nav-link">About</a></li>
+        <li><a href="#skills"    class="nav-link">Skills</a></li>
+        <li><a href="#projects"  class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact"   class="nav-link">Contact</a></li>
       </ul>
-      <button id="darkModeToggle" class="dark-mode-btn">🌙</button>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+          <span class="theme-icon">☀️</span>
+        </button>
+        <button id="menuToggle" class="icon-btn menu-btn" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <h1>Hello, I'm Pratik Kamble</h1>
-      <p>Aspiring Software Developer | BCS Student (2022–2025)</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-      <h2>About Me</h2>
-      <p>
-        I'm Pratik Kamble, a Bachelor of Computer Science (BCS) student specializing in web development, programming, and database systems. I thrive on solving complex problems and creating impactful software solutions.
-      </p>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-item">HTML</div>
-        <div class="skill-item">JavaScript</div>
-        <div class="skill-item">Python</div>
-        <div class="skill-item">Django</div>
-        <div class="skill-item">Frappe</div>
-        <div class="skill-item">PostgreSQL</div>
+    <!-- ── HERO ───────────────────────────────────────────── -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="grid-lines"></div>
       </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <h3>Todo app</h3>
-          <p>Todo app based on frappe.</p>
-          <a href="https://github.com/pratikkamble14/frappe-todo.git" target="_blank" class="btn">View on GitHub</a>
+      <div class="hero-content">
+        <p class="hero-tag">👋 Hello, I'm</p>
+        <h1 class="hero-title">Pratik<br><span class="accent">Kamble</span></h1>
+        <p class="hero-sub" id="typedText"></p>
+        <p class="hero-desc">Motivated DevOps enthusiast passionate about cloud infrastructure, automation, CI/CD pipelines, and system administration. Eager to build reliable, scalable systems.</p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact"  class="btn btn-ghost">Let's Talk →</a>
         </div>
-        <div class="project-card">
-          <h3>Responsive Portfolio Website</h3>
-          <p>Built a fully responsive portfolio website to showcase my skills and projects.</p>
-          <a href="https://github.com/pratikkamble14/pratik-kamble-portfolio.git" target="_blank" class="btn">View on GitHub</a>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Tools &amp; Tech</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">MCS</span><span class="stat-label">Pursuing</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">7.20</span><span class="stat-label">BCS CGPA</span></div>
+        </div>
+      </div>
+      <div class="hero-card-wrap">
+        <div class="hero-card glass">
+          <div class="hero-avatar">PK</div>
+          <p class="hero-card-name">Pratik Chandrakant Kamble</p>
+          <p class="hero-card-role">DevOps &amp; Cloud Enthusiast</p>
+          <div class="hero-card-tags">
+            <span>Docker</span><span>AWS</span><span>CI/CD</span><span>Linux</span><span>Python</span>
+          </div>
+          <div class="hero-card-links">
+            <a href="https://github.com/pratikkamble14" target="_blank" class="card-link">GitHub</a>
+            <a href="https://www.linkedin.com/in/pratik-kamble-9995b0260" target="_blank" class="card-link">LinkedIn</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <h2>Contact Me</h2>
-      <p>I’m open to opportunities and collaborations. Let’s connect!</p>
-      <p>Email: <a href="mailto:pratikkamble1404004@gmail.com">pratikkamble1404004@gmail.com</a></p>
-      <p>Phone: <a href="tel:7448176632">+91 7448176632</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/pratik-kamble-9995b0260" target="_blank">Pratik Kamble</a></p>
+    <!-- ── ABOUT ──────────────────────────────────────────── -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-label">01 / About</div>
+        <h2 class="section-title">Who I Am</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I'm <strong>Pratik Chandrakant Kamble</strong>, a DevOps enthusiast currently pursuing my Master of Computer Science (MCS) from Asian College of Science and Commerce, Pune.</p>
+            <p>I have a strong foundation in <strong>Linux, scripting, and modern DevOps tools</strong> with a keen interest in improving deployment efficiency and system reliability. I'm passionate about cloud infrastructure, automation, and CI/CD pipelines.</p>
+            <p>My interests include <strong>Open Source</strong> and DevOps. I thrive in collaborative, fast-paced environments and am eager to contribute to impactful real-world projects.</p>
+            <a href="mailto:pratikkamble1404004@gmail.com" class="btn btn-primary" style="margin-top:1.5rem;display:inline-block">Get In Touch</a>
+          </div>
+          <div class="about-highlights">
+            <div class="highlight-card glass">
+              <span class="highlight-icon">🎓</span>
+              <h4>Education</h4>
+              <p>MCS – Pursuing</p><p class="hc-sub">BCS – CGPA 7.20</p>
+            </div>
+            <div class="highlight-card glass">
+              <span class="highlight-icon">☁️</span>
+              <h4>Focus</h4>
+              <p>DevOps &amp; Cloud</p><p class="hc-sub">AWS · Docker · CI/CD</p>
+            </div>
+            <div class="highlight-card glass">
+              <span class="highlight-icon">📍</span>
+              <h4>Location</h4>
+              <p>Pimpri, Maharashtra</p><p class="hc-sub">India</p>
+            </div>
+            <div class="highlight-card glass">
+              <span class="highlight-icon">🚀</span>
+              <h4>Interests</h4>
+              <p>Open Source</p><p class="hc-sub">DevOps &amp; Automation</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- ── SKILLS ─────────────────────────────────────────── -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <div class="section-label">02 / Skills</div>
+        <h2 class="section-title">What I Work With</h2>
+
+        <!-- Tool badges row -->
+        <div class="tools-row">
+          <span class="tool-badge">🐧 Ubuntu / Linux</span>
+          <span class="tool-badge">🐍 Python</span>
+          <span class="tool-badge">🐚 Bash</span>
+          <span class="tool-badge">🐳 Docker</span>
+          <span class="tool-badge">☸️ Kubernetes</span>
+          <span class="tool-badge">⚙️ Jenkins</span>
+          <span class="tool-badge">🔄 GitHub Actions</span>
+          <span class="tool-badge">☁️ AWS EC2</span>
+          <span class="tool-badge">🪣 AWS S3</span>
+          <span class="tool-badge">💾 EBS / Volumes</span>
+          <span class="tool-badge">🌐 VPC</span>
+          <span class="tool-badge">🔒 IAM</span>
+          <span class="tool-badge">🛡️ Security Groups</span>
+          <span class="tool-badge">🔁 Git / GitHub</span>
+          <span class="tool-badge">🌐 Django / Frappe</span>
+          <span class="tool-badge">🗄️ MySQL / MariaDB</span>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-category glass">
+            <h3>DevOps &amp; CI/CD</h3>
+            <div class="skill-list">
+              <div class="skill-item">Git &amp; GitHub</div>
+              <div class="skill-item">Docker</div>
+              <div class="skill-item">Jenkins</div>
+              <div class="skill-item">GitHub Actions</div>
+              <div class="skill-item">Kubernetes</div>
+            </div>
+          </div>
+
+          <div class="skill-category glass">
+            <h3>Cloud – AWS</h3>
+            <div class="skill-list">
+              <div class="skill-item">EC2 &amp; VPC</div>
+              <div class="skill-item">S3 &amp; EBS / Volumes</div>
+              <div class="skill-item">IAM &amp; Security Groups</div>
+              <div class="skill-item">Elastic IPs</div>
+              <div class="skill-item">EC2 Deployment</div>
+            </div>
+          </div>
+
+          <div class="skill-category glass">
+            <h3>Dev &amp; Scripting</h3>
+            <div class="skill-list">
+              <div class="skill-item">Python</div>
+              <div class="skill-item">Bash / Ubuntu CLI</div>
+              <div class="skill-item">Django &amp; Frappe</div>
+              <div class="skill-item">SQL / MySQL / MariaDB</div>
+              <div class="skill-item">HTML / CSS / JS</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ───────────────────────────────────────── -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-label">03 / Projects</div>
+        <h2 class="section-title">Things I've Built</h2>
+        <div class="project-grid">
+
+          <div class="project-card glass featured">
+            <div class="project-badge">Featured</div>
+            <div class="project-top">
+              <span class="project-icon">📋</span>
+              <div class="project-links">
+                <a href="https://github.com/pratikkamble14/frappe-todo.git" target="_blank" class="icon-link" aria-label="GitHub">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.11-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3>Todo Web App — DevOps Demo</h3>
+            <p>A todo web application built with Python Flask implementing full CRUD operations. Originally deployed on Render, now <strong>migrated to AWS EC2</strong> running on Ubuntu Linux — demonstrating a real-world cloud deployment workflow.</p>
+            <ul class="project-bullets">
+              <li>Flask backend with JSON-based task storage</li>
+              <li>Deployed on AWS EC2 with Ubuntu Linux &amp; configured Security Groups</li>
+              <li>Git &amp; GitHub for version control &amp; CI/CD pipeline</li>
+              <li>Previously live on Render (PaaS) — migrated to AWS (IaaS)</li>
+            </ul>
+            <div class="project-tech">
+              <span>Python</span><span>Flask</span><span>AWS EC2</span><span>Ubuntu</span><span>Docker</span><span>Git</span>
+            </div>
+          </div>
+
+          <div class="project-card glass">
+            <div class="project-top">
+              <span class="project-icon">🌐</span>
+              <div class="project-links">
+                <a href="https://github.com/pratikkamble14/pratik-kamble-portfolio.git" target="_blank" class="icon-link" aria-label="GitHub">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.11-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.65 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3>Personal Portfolio Website</h3>
+            <p>A fully responsive personal portfolio website built to showcase skills, projects, and professional experience with a modern dark glassmorphism UI.</p>
+            <ul class="project-bullets">
+              <li>Responsive design with dark/light mode</li>
+              <li>Smooth scroll, animations &amp; mobile nav</li>
+              <li>Pure HTML, CSS &amp; Vanilla JS</li>
+            </ul>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+
+          <div class="project-card glass add-project">
+            <div class="add-icon">+</div>
+            <h3>More Coming Soon</h3>
+            <p>Currently working on new DevOps &amp; cloud projects. Stay tuned!</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EDUCATION ──────────────────────────────────────── -->
+    <section id="education" class="section education">
+      <div class="container">
+        <div class="section-label">04 / Education</div>
+        <h2 class="section-title">Academic Background</h2>
+        <div class="edu-timeline">
+
+            <div class="edu-card glass">
+              <div class="edu-body">
+                <div class="edu-meta">
+                  <span class="edu-icon-inline">🎓</span>
+                  <span class="edu-badge pursuing">Pursuing</span>
+                  <span class="edu-year">2025 – Present</span>
+                </div>
+                <h3>Master of Computer Science (MCS)</h3>
+                <p class="edu-college">Asian College of Science and Commerce</p>
+                <p class="edu-univ">Savitribai Phule Pune University, Pune</p>
+              </div>
+            </div>
+
+            <div class="edu-card glass">
+              <div class="edu-body">
+                <div class="edu-meta">
+                  <span class="edu-icon-inline">📘</span>
+                  <span class="edu-badge completed">Completed</span>
+                  <span class="edu-year">2022 – 2025</span>
+                </div>
+                <h3>Bachelor of Computer Science (BCS)</h3>
+                <p class="edu-college">Padmashree Manibhai Desai College</p>
+                <p class="edu-univ">Savitribai Phule Pune University, Pune</p>
+                <p class="edu-cgpa">CGPA: <strong>7.20</strong></p>
+              </div>
+            </div>
+
+          </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ────────────────────────────────────────── -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-label">05 / Contact</div>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="contact-sub">I'm open to DevOps roles, cloud projects, and collaborations. Drop me a message!</p>
+        <div class="contact-grid">
+          <div class="contact-links">
+            <a href="mailto:pratikkamble1404004@gmail.com" class="contact-card glass">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <p class="contact-card-label">Email</p>
+                <p class="contact-card-value">pratikkamble1404004@gmail.com</p>
+              </div>
+            </a>
+            <a href="tel:+917448176632" class="contact-card glass">
+              <span class="contact-icon">📞</span>
+              <div>
+                <p class="contact-card-label">Phone</p>
+                <p class="contact-card-value">+91 7448176632</p>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/pratik-kamble-9995b0260" target="_blank" class="contact-card glass">
+              <span class="contact-icon">💼</span>
+              <div>
+                <p class="contact-card-label">LinkedIn</p>
+                <p class="contact-card-value">pratik-kamble-9995b0260</p>
+              </div>
+            </a>
+            <a href="https://github.com/pratikkamble14" target="_blank" class="contact-card glass">
+              <span class="contact-icon">🐙</span>
+              <div>
+                <p class="contact-card-label">GitHub</p>
+                <p class="contact-card-value">pratikkamble14</p>
+              </div>
+            </a>
+          </div>
+          <form class="contact-form glass" id="contactForm">
+            <h3>Send a Message</h3>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" placeholder="What's on your mind?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Send Message ✉️</button>
+            <p class="form-note" id="formNote"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2025 Pratik Kamble. All Rights Reserved.</p>
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© 2025 <strong>Pratik Chandrakant Kamble</strong>. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://github.com/pratikkamble14" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/pratik-kamble-9995b0260" target="_blank">LinkedIn</a>
+        <a href="mailto:pratikkamble1404004@gmail.com">Email</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <button id="scrollTop" class="scroll-top" aria-label="Back to top">↑</button>
+  <script src="script.js?v=5"></script>
 </body>
- 
 </html>
-
-
